@@ -17,7 +17,7 @@ export default function CursorGlow() {
   return (
     <>
       <div
-        className="pointer-events-none fixed w-20 h-20 rounded-full blur-2xl opacity-40 -translate-x-1/2 -translate-y-1/2 z-40 bg-linear-to-r from-accent via-cyan-400 to-transparent"
+        className="pointer-events-none fixed w-20 h-20 rounded-full blur-2xl opacity-40 -translate-x-1/2 -translate-y-1/2 z-40 bg-linear-to-r from-accent via-cyan-500 to-transparent"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,

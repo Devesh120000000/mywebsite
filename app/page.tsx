@@ -6,6 +6,9 @@ import CursorGlow from "@/components/cursor-glow"
 import AnimatedBadge from "@/components/animated-badge"
 import ScrollBanner from "@/components/scroll-banner"
 import Link from "next/link"
+import ChatBot from "@/components/chatbot"
+import Image from "next/image"
+
 import { ArrowRight, Zap, Shield, Brain, Code, Palette, Briefcase } from "lucide-react"
 
 export default function Home() {
@@ -24,7 +27,7 @@ export default function Home() {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center bg-linear-to-br from-background via-background to-primary/5 overflow-hidden">
+        <section className="relative min-h-screen flex items-center bg-linear-to-br from-background via-background to-primary/5 overflow-hidden bg-black">
           {/* Animated background elements */}
           <div className="absolute top-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
           <div className="absolute bottom-20 left-10 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
@@ -64,16 +67,10 @@ export default function Home() {
 
               {/* Right Visual */}
               <div className="relative h-96">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/30 rounded-2xl blur-2xl" />
+                <div className="absolute inset-0 bg-linear-to-br from-accent/30 to-primary/30 rounded-2xl blur-2xl" />
                 <div className="relative h-full rounded-2xl border-2 border-accent/20 bg-white/5 backdrop-blur p-8 flex items-center justify-center overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative z-10 text-center space-y-4">
-                    <div className="text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      ✕
-                    </div>
-                    <p className="text-lg font-semibold text-primary">KushiraX</p>
-                    <p className="text-sm text-accent">Technology Innovation</p>
-                  </div>
+                  <div className="absolute inset-0 bg-linear-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <Image src="/hero-logo.jpg" alt="KushiraX Technology" width={600} height={300} className="relative z-10" />
                 </div>
               </div>
             </div>
@@ -87,7 +84,7 @@ export default function Home() {
         />
 
         {/* Services Preview Section */}
-        <section className="py-20 bg-gradient-to-b from-background to-primary/5">
+        <section className="py-20 bg-linear-to-b from-background to-primary/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <AnimatedBadge text="Our Expertise" />
@@ -106,7 +103,7 @@ export default function Home() {
                   href="/services"
                   className="group p-8 rounded-xl bg-white border border-border hover:border-accent shadow-sm hover:shadow-lg hover:shadow-accent/20 transition-all"
                 >
-                  <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center mb-4 group-hover:from-accent/30 group-hover:to-primary/30 transition-colors">
+                  <div className="w-14 h-14 rounded-lg bg-linear-to-br from-accent/20 to-primary/20 flex items-center justify-center mb-4 group-hover:from-accent/30 group-hover:to-primary/30 transition-colors">
                     <service.icon className="text-accent" size={24} />
                   </div>
                   <h3 className="text-lg font-semibold text-primary mb-2">{service.title}</h3>
@@ -161,7 +158,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-primary via-primary/90 to-primary relative overflow-hidden">
+        <section className="py-20 bg-linear-to-r from-primary via-primary/90 to-primary relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -translate-y-1/2" />
 
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -181,6 +178,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+       <ChatBot />
       <Footer />
     </>
   )

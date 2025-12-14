@@ -13,7 +13,8 @@ export default function Contact() {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="relative min-h-96 flex items-center bg-gradient-to-br from-primary to-primary/80 text-primary-foreground overflow-hidden">
+        <section className="relative min-h-96 flex items-center bg-linear
+        -to-br from-primary to-primary/80 text-primary-foreground overflow-hidden">
           <div className="absolute top-20 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
@@ -123,7 +124,7 @@ export default function Contact() {
                       className="p-6 rounded-lg bg-white border-2 border-border hover:border-accent transition-colors"
                     >
                       <div className="flex gap-4">
-                        <MapPin className="text-accent flex-shrink-0" size={24} />
+                        <MapPin className="text-accent shrink-0" size={24} />
                         <div>
                           <h3 className="text-lg font-bold text-primary">{office.city}</h3>
                           <p className="text-accent font-semibold text-sm mb-1">{office.role}</p>
